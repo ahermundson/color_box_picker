@@ -45,10 +45,8 @@ body {
   height: 360px;
   width: 640px;
   display: none;
-  margin-bottom: 15px;
   position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -59,16 +57,10 @@ body {
   align-items: center;
 }
 
-button {
-  position: relative;
-  top: 50%;
-  left: 39%;
-}
-
 .correct-response p {
   width: 100px;
-  margin: 100px auto;
   text-align: center;
+  margin: 100px auto;
   padding: 14px 20px;
   background-color: rgb(96,114,150);
   color: white;
