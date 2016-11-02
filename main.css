@@ -18,4 +18,38 @@ h1 {
   margin: 0 auto;
   font-size: 2em;
   text-align: center;
+  color: white;
+}
+
+.correct-response {
+  background: url(success.jpg);
+  height: 360px;
+  width: 640px;
+  position: fixed;
+  top: 20px;
+  left: 28%;
+  background-color:black;
+  color: navy;
+  display: none;
+}
+
+button {
+  position: relative;
+  top: 50%;
+  left: 39%;
+}
+
+.correct-response h3 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.correct-response p {
+  width: 100px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 14px 20px;
+  background-color: rgb(96,114,150);
+  color: white;
+  border: 1px solid white;
 }
