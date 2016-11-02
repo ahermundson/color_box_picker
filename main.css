@@ -1,0 +1,19 @@
+h1 {
+  text-align: center;
+}
+
+.block-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.block-element {
+  width: 200px;
+  height: 200px;
+}
+
+.nope {
+  margin: 0 auto;
+  font-size: 2em;
+}
