@@ -5,6 +5,7 @@ var target = colorArray[randomNumber(0, 6)];
 $('.color-target').text(target);
 $('.color-target').css({'color': target});
 blockMaker(colorArray);
+var correctCounter = 0;
 
 //checking response. If correct, fade in correct message and run delay function on div. If incorrect, shake element and display wrong.
 $('.block-container').on('click', '.block-element', function(){
@@ -14,10 +15,14 @@ $('.block-container').on('click', '.block-element', function(){
     $(this).css({'background-color': 'white'});
     $(this).find('.yes').slideDown().addClass('animated flash');
     delay(this);
+    correctCounter++;
+    $('#correct-counter').text(correctCounter);
   } else {
     $(this).addClass('animated shake')
     $(this).find('.nope').fadeIn();
     $('.nope').fadeOut('slow');
+    correctCounter = 0;
+    $('#correct-counter').text(correctCounter);
   }
 });
 
