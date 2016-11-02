@@ -11,14 +11,14 @@ $('.block-container').on('click', '.block-element', function(){
     console.log("correct");
   } else {
     $(this).addClass('animated shake')
-    $(this).find('.nope').text("WRONG!");
+    $(this).find('.nope').fadeIn();
     $('.nope').fadeOut('slow');
   }
 });
 
 function blockMaker(colorArray) {
   for (var i = 0; i < colorArray.length; i++) {
-    $('.block-container').append('<div class=' + colorArray[i] + '><p class="nope"></p></div>');
+    $('.block-container').append('<div class=' + colorArray[i] + '><p class="nope">WRONG!</p></div>');
     $('div:last').addClass('block-element');
     $('div:last').css({'background-color': colorArray[i]});
   }
@@ -27,5 +27,4 @@ function blockMaker(colorArray) {
 function randomNumber(min, max){
     return Math.floor(Math.random() * (1 + max - min) + min);
 }
-
 });
