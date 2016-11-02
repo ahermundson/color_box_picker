@@ -3,6 +3,7 @@ var colorArray = ["yellow", "blue", "red", "orange", "pink",  "black", "purple",
 shuffle(colorArray);
 var target = colorArray[randomNumber(0, 6)];
 $('.color-target').text(target);
+$('.color-target').css({'color': target});
 blockMaker(colorArray);
 
 //checking response. If correct, fade in correct message and run delay function on div. If incorrect, shake element and display wrong.
@@ -28,6 +29,7 @@ $('.button').on('click', function() {
   blockMaker(colorArray);
   target = colorArray[randomNumber(0, 6)];
   $('.color-target').text(target);
+  $('.color-target').css({'color': target});
 });
 
 function blockMaker(colorArray) {
