@@ -5,13 +5,13 @@ var target = colorArray[randomNumber(0, 6)];
 $('.color-target').text(target);
 blockMaker(colorArray);
 
-//checking response. If correct, fade in correct message. If incorrect, shake element and display wrong.
+//checking response. If correct, fade in correct message and run delay function on div. If incorrect, shake element and display wrong.
 $('.block-container').on('click', '.block-element', function(){
   $('.block-element').removeClass('animated shake');
   if ($(this).hasClass(target)) {
     $('.correct-response').fadeIn();
     $(this).css({'background-color': 'white'});
-    $(this).find('.yes').slideDown();
+    $(this).find('.yes').slideDown().addClass('animated flash');
     delay(this);
   } else {
     $(this).addClass('animated shake')
@@ -37,15 +37,14 @@ function blockMaker(colorArray) {
     $('div:last').css({'background-color': colorArray[i]});
   }
 }
-
+//function to select a random number. Used to select a random color as our target
 function randomNumber(min, max){
     return Math.floor(Math.random() * (1 + max - min) + min);
 }
-
+//function to run on correct response. Will change background color to white, display correct and then return to original color
 function correctResponseColorChange(correctDiv) {
   $(correctDiv).css({'background-color': target})
   $(correctDiv).find('.yes').slideUp();
-  console.log("test");
 }
 
 function delay(correctDiv) {

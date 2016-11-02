@@ -46,7 +46,7 @@ body {
   width: 640px;
   display: none;
   position: fixed;
-  top: 25%;
+  top: 40%;
   left: 50%;
   transform: translateX(-50%);
 }
